@@ -1,0 +1,20 @@
+[project]
+name = "print-core"
+version = "0.1.0"
+description = "Flask app"
+requires-python = ">=3.14"
+dependencies = [
+  "bambulabs-api>=2.6.6",
+  "fastapi>=0.110.0",
+  "uvicorn[standard]>=0.27.0",
+  "pydantic-settings>=2.2.0",
+]
+
+[dependency-groups]
+dev = [
+  "python-dotenv>=1.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
