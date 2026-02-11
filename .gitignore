@@ -3,3 +3,36 @@
 !.env.example
 !.env.sample
 !.env.template
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+wheelhouse/
+venv/
+.venv/
+ENV/
+env/
+.ENV/
+.pytest_cache/
+.mypy_cache/
+.pyright/
+.pytype/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.log
+
+# FastAPI / ASGI
+*.uvicorn
