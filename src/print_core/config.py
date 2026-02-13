@@ -10,6 +10,10 @@ class Settings(BaseSettings):
     printer_ip: str = ""
     printer_serial: str = ""
     printer_access_code: str = ""
+    s3_endpoint_url: str = ""
+    s3_access_key: str = ""
+    s3_secret_key: str = ""
+    s3_bucket_name: str = ""
 
     model_config = SettingsConfigDict(
         env_file_encoding="utf-8",

@@ -2,7 +2,10 @@ pyproject.toml
 src/print_core/__init__.py
 src/print_core/app.py
 src/print_core/config.py
+src/print_core/dependencies.py
 src/print_core/printer.py
+src/print_core/s3_client.py
+src/print_core/utils.py
 src/print_core.egg-info/PKG-INFO
 src/print_core.egg-info/SOURCES.txt
 src/print_core.egg-info/dependency_links.txt
