@@ -8,16 +8,19 @@ from print_core.printer import (
     connect_printer,
     disconnect_printer,
 )
+from print_core.tunnel import tunnel
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     printer = connect_printer()
+    tunnel.start()
 
     app.state.printer = printer
 
     yield
 
+    tunnel.stop()
     disconnect_printer(printer)
 
 

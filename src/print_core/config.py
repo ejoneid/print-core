@@ -14,6 +14,9 @@ class Settings(BaseSettings):
     s3_access_key: str = ""
     s3_secret_key: str = ""
     s3_bucket_name: str = ""
+    print_flow_host: str = ""
+    print_flow_host_user: str = ""
+    print_flow_host_password: str = ""
 
     model_config = SettingsConfigDict(
         env_file_encoding="utf-8",
