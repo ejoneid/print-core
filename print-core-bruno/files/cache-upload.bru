@@ -1,0 +1,22 @@
+meta {
+  name: cache-upload
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/files/cache
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "files": ["test_backup_test_1,765,406,574,911.tar.gz"]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

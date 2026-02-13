@@ -2,3 +2,6 @@ bambulabs-api>=2.6.6
 fastapi>=0.110.0
 uvicorn[standard]>=0.27.0
 pydantic-settings>=2.2.0
+boto3>=1.42.47
+mypy-boto3-s3>=1.42.37
+ftputil>=5.1.0
