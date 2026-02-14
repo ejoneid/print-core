@@ -94,8 +94,8 @@ tunnel = ReverseSSHTunnel(
     host=settings.print_flow_host,
     username=settings.print_flow_host_user,
     password=settings.print_flow_host_password,
-    remote_bind_host="127.0.0.1",
-    remote_bind_port=18000,
+    remote_bind_host="0.0.0.0",
+    remote_bind_port=19001,
     local_bind_host="127.0.0.1",
-    local_bind_port=8000,
+    local_bind_port=18000,
 )

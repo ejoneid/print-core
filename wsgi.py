@@ -6,4 +6,4 @@ app = create_app()
 
 if __name__ == "__main__":
     # For local dev: `python wsgi.py`
-    uvicorn.run("wsgi:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("wsgi:app", host="0.0.0.0", port=18000, reload=True)
