@@ -1,6 +1,6 @@
 # print-core
 
-FastAPI service that controls a Bambu Lab 3D printer. It syncs `.3mf` files from S3 to the printer's cache via FTP and exposes endpoints for printer status and file management.
+Axum service that controls a Bambu Lab 3D printer. It syncs `.3mf` files from S3 to the printer's cache via FTP and exposes endpoints for printer status and file management.
 
 ## Endpoints
 

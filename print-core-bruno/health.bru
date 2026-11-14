@@ -1,11 +1,11 @@
 meta {
-  name: api-status
+  name: health
   type: http
   seq: 1
 }
 
 get {
-  url: {{baseUrl}}/status
+  url: {{baseUrl}}/health
   body: none
   auth: inherit
 }

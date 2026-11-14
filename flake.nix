@@ -1,5 +1,5 @@
 {
-  description = "Python 3.14 development environment";
+  description = "Rust development shell";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -19,17 +19,27 @@
           inherit system;
           config.allowUnfree = true;
         };
-        python = pkgs.python314;
-        claude = pkgs.claude-code;
       in
       {
         devShells.default = pkgs.mkShell {
-          packages = [
-            claude
-            python
-            pkgs.uv
-            pkgs.pipx
+          packages = with pkgs; [
+            rustc
+            cargo
+            rustfmt
+            clippy
+            rust-analyzer
+
+            # Nice-to-haves
+            bacon # background checker: re-runs check/clippy/test on save
+            cargo-watch # run any cargo command on file changes
+            cargo-edit # cargo add / rm / upgrade helpers
           ];
+
+          # Lets rust-analyzer find the standard library sources
+          RUST_SRC_PATH = "${pkgs.rustPlatform.rustLibSrc}";
+
+          # Full backtraces when something panics
+          RUST_BACKTRACE = "1";
         };
       }
     );
